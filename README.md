@@ -25,4 +25,20 @@
 </div>
 
 ## Info
-1. z2m-multiply-1
+#configuration.yaml 
+####################################################################################################################################
+homeassistant: true
+advanced:
+  channel: 20 #信道修改成 15 20 25
+mqtt:
+  server: mqtt://localhost:1883 #mqtt设置  #(localhost=ha安装Mosquitto的局域网地址)
+  base_topic: zigbee2mqtt2   #base_topic多加一个2 以此类推
+  user: mqtt
+  password: mqtt
+  client_id: zigbee2mqtt2 #client_id多加一个2 以此类推
+frontend:
+  port: 8099
+serial:
+  port: tcp://localhost:端口号 #网关设置  #(localhost=网关局域网地址)企业版+多模旧版端口8888,多模自动版端口6638
+  adapter: ezsp
+####################################################################################################################################
